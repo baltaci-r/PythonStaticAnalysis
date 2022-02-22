@@ -22,18 +22,18 @@ def generateGraph(args):
         generator.genAST()
     elif graphType == 'cfg':
         generator.genCFG()
-    elif graphType == 'cf':
-        generator.genCF()
+    elif graphType == 'cg':
+        generator.genCG()
     elif graphType == 'all':
         generator.genAST()
         generator.genCFG()
-        generator.genCF()
+        generator.genCG()
 
 
 if __name__=="__main__":
 
     parser = argparse.ArgumentParser()
-    parser.add_argument('-t', default='ast', choices=['ast', 'cfg', 'cf', 'all'], help='Type of static analysis')
+    parser.add_argument('-t', default='ast', choices=['ast', 'cfg', 'cg', 'all'], help='Type of static analysis')
     parser.add_argument('-p', type=str, help='Filepath for python code')
     parser.add_argument('-s', help='Use to pass python file as a string')
     parser.add_argument('-f', default='graph', help='Filename for output')

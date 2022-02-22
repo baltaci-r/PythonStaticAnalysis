@@ -1,4 +1,4 @@
-from graphs import PyAST, PyCFG, PyCF
+from graphs import PyAST, PyCFG, PyCG
 import os
 
 class GraphGenerator:
@@ -24,8 +24,8 @@ class GraphGenerator:
         g.format = self.format
         g.view()
 
-    def genCF(self):
-        cf = PyCF()
+    def genCG(self):
+        cf = PyCG()
         g = cf.generate(self.code, self.outname)
         g.format = self.format
         g.view()
