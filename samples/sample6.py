@@ -1,3 +1,4 @@
+import math
 def quad_solver(a, b, c):
     discriminant = b^2 - 4*a*c
     r1, r2 = 0, 0
